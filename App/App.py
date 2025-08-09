@@ -20,6 +20,15 @@ import nltk
 
 nltk.download('stopwords')
 
+# Access secrets
+db_host = st.secrets["DB_HOST"]
+db_user = st.secrets["DB_USER"]
+db_pass = st.secrets["DB_PASSWORD"]
+gemini_key = st.secrets["GEMINI_API_KEY"]
+
+st.write("Database host is:", db_host)
+
+
 # -------------------- Styling --------------------
 def local_css():
     st.markdown("""
